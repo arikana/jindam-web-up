@@ -1,0 +1,72 @@
+baseURL = "https://xgreennarae.github.io/jindam-web/"
+canonifyURLs = true
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = true
+
+staticDir = ["static", "themes/Niello/static"]
+
+theme = "Niello"
+
+# md 안에 html 넣을때
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[languages]
+	[languages.en]
+		languageCode = "en-us"
+		LanguageName = "🇺🇸EN"
+		contentDir = "content/en"
+		weight = 1
+		[[languages.en.menus.main]]
+			name = 'Home'
+			pageRef = '/'
+			weight = 1
+		[[languages.en.menus.main]]
+			name = 'Categories'
+			pageRef = '/categories'
+			weight = 2
+		[[languages.en.menus.main]]
+			name = 'Tags'
+			pageRef = '/tags'
+			weight = 3
+	[languages.zh]
+        languageCode = "zh-cn"
+        LanguageName = "🇨🇳CN"
+        contentDir = "content/zh"
+        weight = 2
+		[[languages.zh.menus.main]]
+			name = 'example首页'
+			pageRef = '/'
+			weight = 1
+		[[languages.zh.menus.main]]
+			name = 'example文章分类'
+			pageRef = '/categories'
+			weight = 2
+		[[languages.zh.menus.main]]
+			name = 'example标签'
+			pageRef = '/tags'
+			weight = 3
+
+[params]
+    instagram = "https://www.instagram.com/jindam.cau"
+[params.google]
+	google_ad_client = "******"
+	ga4 = "******"
+[params.bannershowcase]
+	categories = ["추천"]
+	limit = 4
+[params.email]
+	contact = "editor@jindam.news"
+[params.ignore]
+	categories = ["privacy", "terms", "archives", "cookie"]
+[params.license]
+	copyright = "&#xA9; 2019 ~ 2025 by <a href='https://jindam.news/'>jindam.news/</a> All Rights Reserved."
+[params.share]
+	sharethis = "******"
+[params.disqus]
+	shortname = "guangmean"
+
+[outputs]
+  home = ["HTML", "JSON"]   # Optional - JSON just for search

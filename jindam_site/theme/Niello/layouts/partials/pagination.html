@@ -1,0 +1,38 @@
+{{- $validFormats := slice "default" "terse" }}
+
+{{- $msg1 := "It must be set to the context of the current page." }}
+{{- $msg2 := "Invalid. Valid choices are: %s." }}
+
+{{- $page := . }}
+{{- $format := "default" }}
+
+{{- if reflect.IsMap . }}
+{{- with .page }}
+{{- $page = . }}
+{{- else }}
+{{- errorf $msg1 }}
+{{- end }}
+{{- with .format }}
+{{- $format = lower . }}
+{{- end }}
+{{- end }}
+
+{{- if in $validFormats $format }}
+{{- if gt $page.Paginator.TotalPages 1 }}
+<ul class="pagination pagination-{{ $format }} mx-2 my-10 text-2xl flex gap-1 sm:gap-5 font-light">
+    {{- partial (printf "inline/pagination/%s" $format) $page }}
+</ul>
+{{- end }}
+{{- else }}
+{{- errorf $msg2 (delimit $validFormats ", ") }}
+{{- end -}}
+
+{{/* Format: default
+{{/* --------------------------------------------------------------------- */}}
+{{- define "inline/pagination/default" }}
+{{- end -}}
+
+{{/* Format: terse
+{{/* --------------------------------------------------------------------- */}}
+{{- define "inline/pagination/terse" }}
+{{- end -}}
