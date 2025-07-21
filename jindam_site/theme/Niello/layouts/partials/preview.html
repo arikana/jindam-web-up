@@ -23,12 +23,13 @@
             </a>
         </h3>
         <div class="flex flex-row items-center justify-start gap-2 py-1 text-lg">
-            {{ if gt .context.PublishDate 0 }}
             {{ if .context.Params.creator }}
-            <span>
+            <!-- 참고: 반응형 한글 줄바꿈 단어 단위로 되도록 break-keep 사용하면 됨. -->
+            <span class="break-keep">
                 {{ .context.Params.creator }}
             </span>
             {{ end }}
+            {{ if gt .context.PublishDate 0 }}
             <time datetime="2025-03-16" class="text-gray-600">
                 {{ .context.PublishDate.Format "2006-01-02 15:04" }}
                 |

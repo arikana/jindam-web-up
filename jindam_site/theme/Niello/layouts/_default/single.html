@@ -35,7 +35,7 @@
 <img src="/img/lemon.webp" alt="" class="w-full h-96 object-cover rounded-lg">
 -->
     <div class="group relative">
-        <h1 class="font-bold leading-10 text-gray hover:text-gray-100"
+        <h1 class="break-keep font-bold leading-10 text-gray hover:text-gray-100"
             style="font-size: 2.5rem;" >
             <a href="{{ .RelPermalink }}">
                 {{ .Title }}
@@ -43,7 +43,7 @@
         </h1>
         <div class="flex items-center gap-2 mt-3 py-2 text-xl space-x-4">
             {{ if .Params.creator }}
-            <span>
+            <span class="break-keep">
                 {{ .Params.creator }}
             </span>
             {{ end }}
