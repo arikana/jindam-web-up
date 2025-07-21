@@ -17,6 +17,7 @@
     <meta name="description" content="{{ $description }}">
     <link rel="canonical" href="{{ .Page.Permalink }}" />
     <link rel="icon" href="{{ .Site.BaseURL }}favicon.ico?v={{ now.Unix }}" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
     {{ partialCached "head/css.html" . }}
     {{ partialCached "head/js.html" . }}
 

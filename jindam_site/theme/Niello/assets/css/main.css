@@ -173,3 +173,10 @@
         bottom: 0;
     }
 }
+
+@layer utilities {
+  .font-pretendard {
+    font-family: 'Pretendard', sans-serif;
+  }
+}
+
