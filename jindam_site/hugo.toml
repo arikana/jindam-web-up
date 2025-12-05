@@ -1,4 +1,4 @@
-baseURL = "https://jindam_news/"
+baseURL = "https://xgreennarae.github.io/jindam-web/"
 canonifyURLs = true
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
