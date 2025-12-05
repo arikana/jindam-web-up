@@ -1,7 +1,7 @@
 baseURL = "https://xgreennarae.github.io/jindam-web/"
 canonifyURLs = true
 defaultContentLanguage = "en"
-defaultContentLanguageInSubdir = false
+defaultContentLanguageInSubdir = true
 
 staticDir = ["static", "themes/Niello/static"]
 
