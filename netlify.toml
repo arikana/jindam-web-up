@@ -1,4 +1,4 @@
-[build]
+ [build]
   base = "jindam_site"
   publish = "public"
   command = "hugo --gc --minify"
